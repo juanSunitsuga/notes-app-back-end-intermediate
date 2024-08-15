@@ -14,6 +14,7 @@ class NotesHandler {
 
     postNoteHandler(request, h) {
         try {
+            console.log(this._validator);
             this._validator.validateNotePayload(request.payload);
             const {title = 'untitled', body, tags} = request.payload;
 
@@ -99,7 +100,7 @@ class NotesHandler {
 
             return {
                 status: 'success',
-                message: 'Catatan berhasil diperbarui',
+                message: 'Catatan berhasil diperbaharui',
             };
         } catch (error) {
             if (error instanceof ClientError) {

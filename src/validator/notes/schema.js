@@ -7,4 +7,3 @@ const NotePayloadSchema = Joi.object({
 });
 
 module.exports = {NotePayloadSchema};
-

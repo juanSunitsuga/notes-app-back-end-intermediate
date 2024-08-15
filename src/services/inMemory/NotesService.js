@@ -1,4 +1,4 @@
-const {nanoid} = require('nanoid');
+const { nanoid } = require('nanoid');
 const InvariantError = require('../../exceptions/InvariantError');
 const NotFoundError = require('../../exceptions/NotFoundError');
 
@@ -30,7 +30,6 @@ class NotesService {
     getNotes() {
         return this._notes;
     }
-
 
     getNoteById(id) {
         const note = this._notes.filter((n) => n.id === id)[0];
